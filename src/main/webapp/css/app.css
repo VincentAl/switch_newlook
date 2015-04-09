@@ -1,0 +1,391 @@
+body{
+	background-color: rgb(236,236,236);
+	min-height: 565px;
+	/*overflow: hidden;*/
+	overflow-y: scroll;
+	font-family: sans-serif;
+}
+
+label, p{
+	color: #3A539B;
+}
+
+h1{
+	color: #34495E;
+}
+
+.panel{
+	cursor: pointer;
+	margin-bottom: 0px;
+
+	transition: all 150ms cubic-bezier(.11,.21,.56,1.46);	
+	-webkit-transition: all 150ms cubic-bezier(.11,.21,.56,1.46);	
+}
+
+[class*="block-grid-"]{
+	margin: 0px 1.2rem;
+	border: 1px solid #d8d8d8;
+}
+
+.focused{
+	box-shadow: 0px 0px 15px ;
+	transform: scale(1.2, 1.2);
+	-webkit-transform: scale(1.2, 1.2);
+
+
+	transition: all 150ms cubic-bezier(.11,.21,.56,1.46);	
+	-webkit-transition: all 150ms cubic-bezier(.11,.21,.56,1.46);	
+}
+
+.round-focused{
+	/*box-shadow: 0px 0px 15px ;*/
+	border-radius: 100%;
+	transform: scale(0, 0);
+	-webkit-transform: scale(0, 0);
+}
+
+.subPane{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	/*background-color: red;*/
+	top: 80px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	z-index: 20;
+
+
+	transition: all 350ms cubic-bezier(.73,.09,.65,.81);	
+	-webkit-transition: all 1350ms cubic-bezier(.73,.09,.65,.81);
+}
+
+.back-head{
+	background-color: rgb(242, 242, 242);
+	border: 2px solid rgb(216, 216, 216);
+	border-bottom: 0px;
+	margin-right: 1.2rem;
+	margin-left: 1.2rem;
+	text-align: right;
+}
+
+.back-head .back{
+	color: white;
+	text-shadow: 0px 0px 3px black;
+	margin-right: .5rem;
+	cursor: pointer;
+}
+
+.side-nav li a:not(.button){
+	color: #3A539B;
+}
+
+.side-nav li a:not(.button):hover{
+	color: #3498DB;
+}
+
+button, .button{
+	background-color: #336E7B;
+}
+
+button, .button:hover{
+	background-color: #34495E;
+}
+
+#contentPane{
+}
+
+.pane{
+	z-index: 10;
+	padding-top: 80px;
+	padding-bottom: 50px;
+}
+
+.aside{
+	background-color: rgb(218, 223, 225);
+	box-shadow: 0px 0px 4px;
+}
+
+.pinkPane{
+	background-color: #D2527F;
+	color: white;
+	padding-top: .9375rem;
+	padding-bottom: .9375rem;
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.49);
+	border-radius: 3px;
+	text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+	margin-bottom: 1rem;
+}
+
+#orderList #orderNow{
+	margin-top: .5rem;
+	margin-bottom: 0px;
+	margin-right: 1rem;
+	/*display: block;*/
+}
+
+
+.aside{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	z-index: 0;
+}
+
+.menu-bottom{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+
+.menu-top{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+}
+
+
+
+.menu-bottom{
+	background: rgb(210, 215, 211);
+}
+
+.backframe{
+	max-width: none
+}
+
+.menu{
+	text-align: center;
+}
+
+/*-------------------------------*/
+/*--- Commander Menu Recap >> ---*/
+/*-------------------------------*/
+
+.menu-recap{
+	/* margin: 1rem
+ */}
+
+.menu-item{
+	display: inline-block;
+	background-color: rgb(210, 82, 127);
+	height: 4rem;
+	width: 4rem;
+	border: .5rem solid rgb(210, 82, 127);
+	border-left: 0px;
+	border-right: 0px;
+}
+
+.menu-item:first-child{
+	border-radius: 10rem 0rem 0rem 10rem;
+	border: .5rem solid rgb(112, 63, 72);
+	border-right-color: rgb(210, 82, 127);
+	width: 5rem;
+
+}
+
+.menu-item:nth-child(3){
+	width: 5rem;
+	border-left: .5rem solid rgb(210, 82, 127);
+	border-right: .5rem solid rgb(210, 82, 127);
+}
+
+.menu-item:last-child{
+	border-radius: 0rem 10rem 10rem 0rem;
+	border: .5rem solid rgb(112, 63, 72);
+	border-left-color: rgb(210, 82, 127);
+	width: 5rem;
+}
+
+/* before */
+
+.menu-item::before{
+	content: "";
+	border-radius: 10rem;
+	border: 0px solid black;	
+	background-color: white;
+	width: 4rem;
+	height: 3rem;
+	position: absolute;
+	cursor: pointer;
+}
+
+.menu-item:first-child:before {
+	border-bottom-right-radius: 0px;
+	border-top-right-radius: 0px;
+	background-color: rgb(210, 82, 127);
+}
+
+.menu-item:last-child:before {
+	border-bottom-left-radius: 0px;
+	border-top-left-radius: 0px;
+	background-color: rgb(210, 82, 127);
+}
+
+/* hovers */
+
+.menu-category:after{
+	transition: all 200ms ease-in-out;
+	-webkit-transition: all 200ms ease-in-out;
+}
+
+
+/* food icons */
+
+[class^="flaticon-"]:before {
+	position: absolute;
+	font-size: 2rem;
+	margin-left: .9rem;
+	color: rgb(147, 147, 147);
+	cursor: pointer;
+}
+
+.empty-spot [class^="flaticon-"]::before{
+	color: #912E27
+}
+
+.full-spot [class^="flaticon-"]::before{
+	color: #47880D
+}
+
+/*-------------------------------*/
+/*--- << Commander Menu Recap ---*/
+/*-------------------------------*/
+
+
+
+.logo{
+	padding: 0.9375rem;
+	background: rgb(210, 215, 211);
+}
+
+#orderbar{
+	position: fixed;
+	top: -60px;
+	background-color: rgba(0,0,0,.5);
+	height: 100px;
+	z-index: 90;
+
+	-webkit-transition: all 200ms ease-in-out;
+}
+
+
+#orderbar:hover{
+	top: 0px;
+
+	-webkit-transition: all 200ms ease-in-out;
+}
+
+#orderbar .orderbar-hide{
+	visibility: hidden;
+
+	-webkit-transition: all 100ms ease-in-out;
+}
+
+#orderbar:hover .orderbar-hide{
+	visibility: visible;
+
+	-webkit-transition: all 1000ms ease-in-out;
+}
+
+#ordericon{
+	background-color: #fff;
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	position: absolute;
+	right: 20px;
+	bottom: 10px;
+}
+
+.dot-frame{
+	width: 50px;
+	height: 50px;
+	position: relative;
+}
+
+.tube{
+	height: 7px;
+	width: 200px;
+	background-color: white;
+	position: absolute;
+	top: 22px;
+	left: 30px;
+}
+.dot-fixed{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: white;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+
+.dot{
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: white;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+
+	-webkit-animation: shine 1.5s infinite ease-in-out;
+	animation-name: shine 1.5s infinite ease-in-out;
+}
+
+@-webkit-keyframes shine{
+	0%{
+		-webkit-transform: scale(.0);
+		opacity: .9;
+	}
+	50%{
+		opacity: .7;
+	}
+	100%{
+		-webkit-transform: scale(2);
+		opacity: 0;
+	}
+}
+
+@keyframes shine{
+	0%{ 
+		transform: scale(0);
+		-webkit-transform: scale(0);
+		opacity: .9;
+	}
+	50%{
+		opacity: .7;
+	}
+	100%{
+		transform: scale(2);
+		-webkit-transform: scale(2);
+		opacity: 0;
+	}
+}
+
+.rotate-loader{
+	-webkit-animation: spin 1.8s infinite ease-in-out;
+}
+
+@-webkit-keyframes spin{
+	0%{
+		-webkit-transform: rotate(0deg);
+	}
+	25%{
+		-webkit-transform: rotate(90deg);
+	}
+	50%{
+		-webkit-transform: rotate(180deg);
+	}
+	75%{
+		-webkit-transform: rotate(270deg);
+	}
+	100%{
+		-webkit-transform: rotate(360deg);
+	}
+}
