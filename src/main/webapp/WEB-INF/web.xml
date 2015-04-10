@@ -17,5 +17,29 @@
 		<servlet-name>Home</servlet-name>
 		<url-pattern>/home</url-pattern>
 	</servlet-mapping>
+	
+	
+	
+	<!--  AJAX RESTEASY -->
+	
+	<context-param>
+	  	<param-name>resteasy.scan</param-name>
+	  	<param-value>true</param-value>
+ 	</context-param>
+  
+	<context-param>
+	  	<param-name>resteasy.servlet.mapping.prefix</param-name>
+	  	<param-value>/singlepage</param-value>
+	</context-param>
+  
+  	<servlet>
+	  	<servlet-name>Resteasy</servlet-name>
+	  	<servlet-class>org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher</servlet-class>	
+  	</servlet>
+  
+	<servlet-mapping>
+	  	<servlet-name>Resteasy</servlet-name>
+	  	<url-pattern>/singlepage/*</url-pattern>
+ 	</servlet-mapping>
 
 </web-app>
