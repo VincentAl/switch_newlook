@@ -17,5 +17,16 @@
 		<servlet-name>Home</servlet-name>
 		<url-pattern>/home</url-pattern>
 	</servlet-mapping>
+	
+	<!--  Servlet de test  -->
+	<servlet>
+		<servlet-name>Test</servlet-name>
+		<servlet-class>switch_newlook.servlets.Test</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Test</servlet-name>
+		<url-pattern>/test</url-pattern>
+	</servlet-mapping>
 
 </web-app>

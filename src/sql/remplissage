@@ -1,0 +1,3 @@
+INSERT INTO `switch_newlook`.`itemcarte` (`idItemCarte`, `nom`, `type`, `description`, `disponible`, `prix`) VALUES (NULL, 'burger1', 'PLAT', 'Un burger test', '1', '3'), (NULL, 'Salade1', 'PLAT', 'Salade test', '1', '2');
+INSERT INTO `switch_newlook`.`client` (`idClient`, `pseudo`, `password`, `mail`) VALUES (NULL, 'clientA', 'clientA', 'clientA@dev.fr'), (NULL, 'clientB', 'clientB', 'clientB@dev.fr');
+INSERT INTO `switch_newlook`.`itemcarte` (`idItemCarte`, `nom`, `type`, `description`, `img`, `disponible`, `prix`) VALUES (NULL, 'Fanta Citron', 'BOISSON', NULL, NULL, '1', '1.5'), (NULL, 'Ice Tea Pêche', 'BOISSON', NULL, NULL, '1', '1.5'), (NULL, 'Coca ', 'BOISSON', 'Coca l''original', NULL, '1', '1.5'), (NULL, 'Fanta Orange', 'BOISSON', NULL, NULL, '1', '1.5');
