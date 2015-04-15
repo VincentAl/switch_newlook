@@ -32,8 +32,17 @@ public class CarteManager {
 	public List<ItemCarte> dispoBoissons(){
 		return itemCarteDao.getAllDispo(ItemCarte.BOISSON);
 	}
-	public List<ItemCarte> dispoPlats(){
-		return itemCarteDao.getAllDispo(ItemCarte.PLAT);
+	public List<ItemCarte> dispoPaninis(){
+		return itemCarteDao.getAllDispo(ItemCarte.PANINI);
+	}
+	public List<ItemCarte> dispoPizzas(){
+		return itemCarteDao.getAllDispo(ItemCarte.PIZZA);
+	}
+	public List<ItemCarte> dispoSalades(){
+		return itemCarteDao.getAllDispo(ItemCarte.SALADE);
+	}
+	public List<ItemCarte> dispoSandwiches(){
+		return itemCarteDao.getAllDispo(ItemCarte.SANDWICH);
 	}
 	public List<ItemCarte> dispoDesserts(){
 		return itemCarteDao.getAllDispo(ItemCarte.DESSERT);

@@ -2,7 +2,10 @@ package swith_newlook.entities;
 
 public class ItemCarte {
 	
-	public static final String PLAT = "PLAT";
+	public static final String SANDWICH = "SANDWICH";
+	public static final String PIZZA = "PIZZA";
+	public static final String PANINI = "PANINI";
+	public static final String SALADE = "SALADE";
 	public static final String BOISSON = "BOISSON";
 	public static final String DESSERT = "DESSERT";
 	public static final String MENU = "MENU";

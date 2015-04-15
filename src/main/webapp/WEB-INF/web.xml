@@ -28,5 +28,16 @@
 		<servlet-name>Test</servlet-name>
 		<url-pattern>/test</url-pattern>
 	</servlet-mapping>
+	
+	<!-- Servlet de la page principale -->
+	<servlet>
+		<servlet-name>PagePrincipale</servlet-name>
+		<servlet-class>switch_newlook.servlets.PagePrincipale</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>PagePrincipale</servlet-name>
+		<url-pattern>/pagePrincipale</url-pattern>
+	</servlet-mapping>
 
 </web-app>
