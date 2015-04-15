@@ -1,2 +1,2 @@
 target/
-src/main/java/dao/DataSourceProvider.java
+src/main/java/switch_newlook/dao/DataSourceProvider.java
