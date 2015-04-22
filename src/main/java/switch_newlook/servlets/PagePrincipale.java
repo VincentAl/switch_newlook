@@ -32,6 +32,8 @@ public class PagePrincipale extends HttpServlet{
 		listeDesItems.add("Boissons");
 		listeDesItems.add("Desserts");
 		
+		
+		req.setAttribute("listeDesItems", listeDesItems);
 		req.setAttribute("listeDesBoissons", CarteManager.getInstance().dispoBoissons());
 		req.setAttribute("listeDesDesserts", CarteManager.getInstance().dispoDesserts());
 		req.setAttribute("listeDesMenus", CarteManager.getInstance().dispoMenus());

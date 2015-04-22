@@ -7,7 +7,7 @@
 		<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-2">
 			<c:forEach var="menu" items="${listeDesMenus}">
 				<li class="panel menu+${menu.idItemCarte}"><a href="/"> <span><img
-							src="${menu.image}" alt="image du menu" /></span> <span
+							src="${menu.img}" alt="image du menu" /></span> <span
 						class="flaticon-shopping40"></span>
 				</a>
 					<div class="detailMenu+${menu.idItemCarte}">

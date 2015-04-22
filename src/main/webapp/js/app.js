@@ -1,4 +1,5 @@
 (function (a){
+	alert("ok google");
 	a(function(){
 
 		a('.primary-menu a').click(function(e){

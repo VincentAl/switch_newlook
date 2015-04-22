@@ -37,7 +37,7 @@
 	
 	<servlet-mapping>
 		<servlet-name>PagePrincipale</servlet-name>
-		<url-pattern>/pagePrincipale</url-pattern>
+		<url-pattern>/pageprincipale</url-pattern>
 	</servlet-mapping>
 
 </web-app>

@@ -7,7 +7,7 @@
 	<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-2">
 		<c:forEach var="itemPrincipal" items="${listeDesItems}">
 			<li class="panel"><a href="/"> <img
-					alt="${itemPrincipal.img}" src="img/sandwichs.jpg">
+					alt="Une image d'un ${itemPrincipal}" title="${itemPrincipal}" src="img/sandwichs.jpg">
 			</a></li>
 		</c:forEach>
 	</ul>
@@ -21,7 +21,7 @@
 				<li class="panel panCarte" data-carteItem="${idItemCarte}">
 					<div class="description">
 						<ul class="no-bullet">
-							<li><span><img src="${sandwich.img}"
+							<li><span><img src="img/sandwichs.jpg"
 								alt="une image du sandwich"></img></span><span class="hide"><i class="flaticon-shopping40"></i></span></li>
 							<li class="hide"><span><h3>${sandwich.nom}</h3></span> <span>
 									soit ${sandwich.prix} €</span></li>
@@ -42,7 +42,7 @@
 				<li class="panel panCarte" data-carteItem="${idItemCarte}">
 					<div class="description">
 						<ul class="no-bullet">
-							<li><span><img src="${pizza.img}" alt="une image du sandwich"></img></span><span class="hide"><i class="flaticon-shopping40"></i></span></li>
+							<li><span><img src="img/pizza.jpg" alt="une image de pizza"></img></span><span class="hide"><i class="flaticon-shopping40"></i></span></li>
 							<li class="hide"><span><h3>${pizza.nom}</h3></span> <span> soit
 									${pizza.prix} €</span></li>
 							<li class="hide">${pizza.description}</li>
@@ -62,7 +62,7 @@
 				<li class="panel panCarte" data-carteItem="${idItemCarte}">
 					<div class="description">
 						<ul class="no-bullet">
-							<li><img src="${salade.img}" alt="une image du sandwich"></img><span class="hide"><i class="flaticon-shopping40"></i></span></li>
+							<li><img src="img/salades.jpg" alt="une image de salade"></img><span class="hide"><i class="flaticon-shopping40"></i></span></li>
 							<li class="hide"><span><h3>${salade.nom}</h3></span> <span> soit
 									${salade.prix} €</span></li>
 							<li class="hide">${salade.description}</li>
@@ -82,7 +82,7 @@
 				<li class="panel panCarte" data-carteItem="${idItemCarte}">
 					<div class="description">
 						<ul class="no-bullet">
-							<li><img src="${panini.img}" alt="une image du sandwich"></img><span class="hide"><i class="flaticon-shopping40"></i></span></li>
+							<li><img src="img/panini.jpg" alt="une image de panini"></img><span class="hide"><i class="flaticon-shopping40"></i></span></li>
 							<li class="hide"><span><h3>${panini.nom}</h3></span> <span> soit
 									${panini.prix} €</span></li>
 							<li class="hide">${panini.description}</li>
@@ -102,7 +102,7 @@
 				<li class="panel panCarte" data-carteItem="${idItemCarte}">
 					<div class="description">
 						<ul class="no-bullet">
-							<li><img src="${boisson.img}" alt="une image du sandwich"></img><span class="hide"><i class="flaticon-shopping40"></i></span></li>
+							<li><img src="img/boissons.jpg" alt="une image de boisson"></img><span class="hide"><i class="flaticon-shopping40"></i></span></li>
 							<li class="hide"><span><h3>${boisson.nom}</h3></span> <span> soit
 									${boisson.prix} €</span></li>
 							<li class="hide">${boisson.description}</li>
@@ -122,7 +122,7 @@
 				<li class="panel panCarte" data-carteItem="${idItemCarte}">
 					<div class="description">
 						<ul class="no-bullet">
-							<li><img src="${dessert.img}" alt="une image du sandwich"></img><span class="hide"><i class="flaticon-shopping40"></i></span></li>
+							<li><img src="img/raw-dessert.jpg" alt="une image de dessert"></img><span class="hide"><i class="flaticon-shopping40"></i></span></li>
 							<li class="hide"><span><h3>${dessert.nom}</h3></span> <span> soit
 									${dessert.prix} €</span></li>
 							<li class="hide">${dessert.description}</li>
