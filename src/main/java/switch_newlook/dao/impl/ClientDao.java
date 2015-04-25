@@ -1,7 +1,7 @@
-package swith_newlook.dao.impl;
+package switch_newlook.dao.impl;
 
 import switch_newlook.dao.GenericDao;
-import swith_newlook.entities.Client;
+import switch_newlook.entities.Client;
 
 public class ClientDao extends GenericDao<Client>{
 

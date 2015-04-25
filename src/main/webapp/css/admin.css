@@ -1,0 +1,46 @@
+body{
+	background-color: rgb(236,236,236);
+}
+div.admin-main{
+	margin-top: 30px;
+	background-color: rgba(0, 0, 0, 0.18);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.34);
+	/*text-align: center;*/
+}
+
+div.admin-items{
+	border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+    background-color: white;
+}
+
+div.admin-name{
+	font-size: 1rem;
+ 	padding: .3rem 0rem .2rem 2.5rem;
+ 	cursor: pointer;
+}
+
+div.admin-title h4{
+	color: #C240B7;
+	text-shadow: 0 0 5px white;
+	margin-left: 1rem;
+	padding-top: 1rem;
+}
+
+div.admin-icon [class^="flaticon-"]:before{
+	margin-left: 0rem;
+	font-size: 1rem;
+	transform: rotateZ(-90deg);
+}
+
+
+div.admin-form{
+	padding-bottom: .4rem;
+	display: none;
+}
+
+div.admin-co{
+	margin-top: 2rem;
+	border-radius: 3px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+

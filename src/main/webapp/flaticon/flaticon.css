@@ -8,33 +8,51 @@
 	font-weight: normal;
 	font-style: normal;
 }
-
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
 	font-family: Flaticon;
-        
-	font-size: 20px;
-	font-style: normal;
-
-	/* margin-left: 20px; */
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
 }.flaticon-apple54:before {
 	content: "\e000";
 }
-.flaticon-drink81:before {
+.flaticon-back57:before {
 	content: "\e001";
 }
-.flaticon-fastfood6:before {
+.flaticon-delivery33:before {
 	content: "\e002";
 }
-.flaticon-glass35:before {
+.flaticon-drink81:before {
 	content: "\e003";
 }
-.flaticon-healthy-food4:before {
+.flaticon-fastfood6:before {
 	content: "\e004";
 }
-.flaticon-sandwich:before {
+.flaticon-glass35:before {
 	content: "\e005";
 }
-.flaticon-wine47:before {
+.flaticon-healthy-food4:before {
 	content: "\e006";
+}
+.flaticon-magnifier13:before {
+	content: "\e007";
+}
+.flaticon-pencils6:before {
+	content: "\e008";
+}
+.flaticon-phone54:before {
+	content: "\e009";
+}
+.flaticon-restaurant26:before {
+	content: "\e00a";
+}
+.flaticon-sandwich:before {
+	content: "\e00b";
+}
+.flaticon-three115:before {
+	content: "\e00c";
+}
+.flaticon-wine47:before {
+	content: "\e00d";
 }

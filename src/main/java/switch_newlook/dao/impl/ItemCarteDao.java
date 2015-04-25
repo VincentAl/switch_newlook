@@ -1,11 +1,11 @@
-package swith_newlook.dao.impl;
+package switch_newlook.dao.impl;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 import switch_newlook.dao.GenericDao;
-import swith_newlook.entities.ItemCarte;
+import switch_newlook.entities.ItemCarte;
 
 public class ItemCarteDao extends GenericDao<ItemCarte>{
 

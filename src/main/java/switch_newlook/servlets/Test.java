@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import swith_newlook.managers.CarteManager;
+import switch_newlook.managers.CarteManager;
 
 public class Test extends HttpServlet{
 

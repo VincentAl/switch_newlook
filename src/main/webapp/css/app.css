@@ -1,7 +1,7 @@
 body{
 	background-color: rgb(236,236,236);
 	min-height: 565px;
-	/*overflow: hidden;*/
+	overflow-x: hidden;
 	overflow-y: scroll;
 	font-family: sans-serif;
 }
@@ -29,49 +29,113 @@ h1{
 
 .focused{
 	box-shadow: 0px 0px 15px ;
+	
+	
 	transform: scale(1.2, 1.2);
 	-webkit-transform: scale(1.2, 1.2);
 
 
 	transition: all 150ms cubic-bezier(.11,.21,.56,1.46);	
 	-webkit-transition: all 150ms cubic-bezier(.11,.21,.56,1.46);	
+	
+	}
+
+.focused .itemThumbnail:after{
+	content: "";
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	
+	/*bg color pour le cache*/
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 9%, rgba(0,0,0,0.78) 82%, rgba(0,0,0,0.78) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(9%,rgba(0,0,0,0)), color-stop(82%,rgba(0,0,0,0.78)), color-stop(100%,rgba(0,0,0,0.78))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 9%,rgba(0,0,0,0.78) 82%,rgba(0,0,0,0.78) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(0,0,0,0) 9%,rgba(0,0,0,0.78) 82%,rgba(0,0,0,0.78) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(0,0,0,0) 9%,rgba(0,0,0,0.78) 82%,rgba(0,0,0,0.78) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(0,0,0,0) 9%,rgba(0,0,0,0.78) 82%,rgba(0,0,0,0.78) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#c7000000',GradientType=0 ); /* IE6-9 */
 }
 
-.round-focused{
-	/*box-shadow: 0px 0px 15px ;*/
-	border-radius: 100%;
-	transform: scale(0, 0);
-	-webkit-transform: scale(0, 0);
+li.paneCarte, li.paneMenu{
+	cursor: pointer;
+	padding: 0px;	
+	border: 1px solid rgba(255, 255, 255, 0);
+}
+
+li.paneCarte img, li.paneMenu img{
+	width: 100%;
+	height: 100%;
+}
+
+li.paneCarte .prix{
+	float: right;
+	font-size: .8rem;
+	line-height: 2.6rem;
+}
+
+li.paneCarte .description{
+	position: absolute;
+	bottom: 0px;
+	padding-left: .4rem;
+	padding-right: .4rem;
+}
+
+li.paneCarte .description p{
+	color: white;
+	margin-bottom: 0px;
+	font-size: .8rem;
+}
+
+li.paneCarte h4{
+	color: rgb(208, 30, 109);
+	text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+li.paneMenu h4{
+	text-align: center;
+}
+
+li.paneMenu .description h4{
+	color: white;
+	position: relative;
+	top: -4rem;
+	text-shadow: 0 0 1px black;
 }
 
 .subPane{
-	width: 100%;
-	height: 100%;
 	position: absolute;
-	/*background-color: red;*/
 	top: 80px;
 	left: 0px;
 	right: 0px;
 	bottom: 0px;
 	z-index: 20;
+	opacity: 1;
+	margin: 0px 1.2rem;
 
 
-	transition: all 350ms cubic-bezier(.73,.09,.65,.81);	
-	-webkit-transition: all 1350ms cubic-bezier(.73,.09,.65,.81);
+	transition: transform 500ms, opacity 200ms cubic-bezier(.73,.09,.65,.81);	
+	-webkit-transition: transform 500ms, opacity 200ms cubic-bezier(.73,.09,.65,.81);
+}
+
+.round-focused{
+	/*box-shadow: 0px 0px 15px ;*/
+	border-radius: 100%;
+	opacity: 0;
+	transform: scale(0, 0);
+	-webkit-transform: scale(0, 0);
 }
 
 .back-head{
-	background-color: rgb(242, 242, 242);
-	border: 2px solid rgb(216, 216, 216);
 	border-bottom: 0px;
-	margin-right: 1.2rem;
-	margin-left: 1.2rem;
-	text-align: right;
+	/*margin-right: 1.2rem;
+	margin-left: 1.2rem;*/
 }
 
 .back-head .back{
 	color: white;
-	text-shadow: 0px 0px 3px black;
+	text-shadow: 0px 0px 3px rgba(0,0,0,.3);
 	margin-right: .5rem;
 	cursor: pointer;
 }
@@ -96,14 +160,14 @@ button, .button:hover{
 }
 
 .pane{
+	width: 100%;
+	display: none;
 	z-index: 10;
 	padding-top: 80px;
 	padding-bottom: 50px;
-}
-
-.aside{
-	background-color: rgb(218, 223, 225);
-	box-shadow: 0px 0px 4px;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	background-color: rgb(236, 236, 236);
 }
 
 .pinkPane{
@@ -130,7 +194,9 @@ button, .button:hover{
 	top: 0px;
 	left: 0px;
 	bottom: 0px;
-	z-index: 0;
+	z-index: 30;
+	background-color: rgb(218, 223, 225);
+	box-shadow: 0px 0px 4px;
 }
 
 .menu-bottom{
@@ -235,7 +301,7 @@ button, .button:hover{
 
 /* food icons */
 
-[class^="flaticon-"]:before {
+.menu-recap-container [class*="flaticon-"]:before {
 	position: absolute;
 	font-size: 2rem;
 	margin-left: .9rem;
@@ -243,11 +309,11 @@ button, .button:hover{
 	cursor: pointer;
 }
 
-.empty-spot [class^="flaticon-"]::before{
+.menu-recap-container .empty-spot [class*="flaticon-"]::before{
 	color: #912E27
 }
 
-.full-spot [class^="flaticon-"]::before{
+.menu-recap-container .full-spot [class*="flaticon-"]::before{
 	color: #47880D
 }
 

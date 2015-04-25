@@ -18,8 +18,6 @@
     <link rel="stylesheet" href="css/foundation.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="font/flaticon.css">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="flaticon/flaticon.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
@@ -56,35 +54,35 @@
             
             <div class="row" id="contentPane">
              <!-- PARTIE POUR LA CARTE -->
-             	<div class="pane" data-pane="1">
+             	<div class="pane" id="pane1">
                		<c:import url="carte.jsp"></c:import>
                 </div>			
                 
                 <!-- ICI LA PARTIE POUR LES MENUS -->
                 
-                 <div class="pane" data-pane="2">
+                 <div class="pane" id="pane2">
                 	<c:import url="menu.jsp"></c:import>
                 </div>
                 
                 <!-- ICI CA COMMANDE -->
-                <div class="pane" data-pane="3">
+                <div class="pane" id="pane3">
                 	<c:import url="commander.jsp"></c:import>
                 </div>
                 
                 <!-- ICI CA CONTACT -->
-                <div class="pane" data-pane="4">
+                <div class="pane" id="pane4">
                 	<c:import url="contact.jsp"></c:import>
                 </div>
                 
                 <!-- ICI POUR LE PLAN -->
                 
-                <div class="pane" data-pane="5">
+                <div class="pane" id="pane5">
 						<c:import url="plan.jsp"></c:import>
 				</div>
 					
 					<!-- ICI POUR LES TERMES -->
 					
-					<div class="pane" data-pane="6">
+					<div class="pane" id="pane6">
 						<c:import url="termes.jsp"></c:import>
 					</div>
             </div>

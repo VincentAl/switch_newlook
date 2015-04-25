@@ -1,9 +1,9 @@
-package swith_newlook.managers;
+package switch_newlook.managers;
 
 import java.util.List;
 
-import swith_newlook.dao.impl.ItemCarteDao;
-import swith_newlook.entities.ItemCarte;
+import switch_newlook.dao.impl.ItemCarteDao;
+import switch_newlook.entities.ItemCarte;
 
 public class CarteManager {
 
