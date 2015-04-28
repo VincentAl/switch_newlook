@@ -9,6 +9,10 @@ public class ItemCarte {
 	public static final String BOISSON = "BOISSON";
 	public static final String DESSERT = "DESSERT";
 	public static final String MENU = "MENU";
+
+	public static final int DISPO = 1;
+	public static final int ALL = 0;
+	
 	
 	
 	private Integer idItemCarte;

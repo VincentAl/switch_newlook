@@ -55,7 +55,7 @@
             <div class="row" id="contentPane">
              <!-- PARTIE POUR LA CARTE -->
              	<div class="pane" id="pane1">
-               		<c:import url="carte.jsp"></c:import>
+               		<c:import url="carte2.jsp"></c:import>
                 </div>			
                 
                 <!-- ICI LA PARTIE POUR LES MENUS -->

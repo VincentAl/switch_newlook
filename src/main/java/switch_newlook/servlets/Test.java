@@ -8,20 +8,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import switch_newlook.entities.ItemCarte;
 import switch_newlook.managers.CarteManager;
 
 public class Test extends HttpServlet{
 
-	public Test() {
-		// TODO Auto-generated constructor stub
-	}
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		System.out.println(CarteManager.getInstance().dispoBoissons().get(0).getNom());
-		
-		req.setAttribute("boissons", CarteManager.getInstance().dispoBoissons());
+		req.setAttribute("boissons", CarteManager.getInstance().listItemCarte(ItemCarte.BOISSON, ItemCarte.DISPO));
 		
 		RequestDispatcher view = req.getRequestDispatcher("/WEB-INF/test.jsp");
 		view.forward(req, resp);

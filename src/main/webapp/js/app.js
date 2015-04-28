@@ -57,13 +57,13 @@
 		}
 
 		a('.paneCarte').click(function(e) {
-			e.preventDefault();
 			focusPane(a(this), false);
 		});
 
-		a('.paneMenu').click(function(e) {
-			e.preventDefault();
-			focusPane(a(this), true, e);
+		a('.itemThumbnail').click(function(e) {
+			//a(this).parent().removeClass("round-focused");
+			//a(this).addClass("reversed-hide").next().addClass("reversed-show");
+			focusPane(a(this).parent(), true, e);
 		});
 
 		a('.back').click(function(e) {
@@ -75,6 +75,9 @@
 			//a(this).parent().next().children().removeClass('round-focused');
 		});
 
+		a('#menu-new').click(function(e){
+			a('#menu-new-type-cont').css('transform', 'scale(1,1)');
+		});
 
 
 		function focusPane(elem, rounded, event){
@@ -95,7 +98,7 @@
 
 
 			newElem.css('transformOrigin', mousePos.mouseX+'px '+mousePos.mouseY+'px 0px').removeClass('round-focused');
-			a('#grilleMenu').hide();
+			a('.paneMenu .itemThumbnailkk').hide();
 
 
 			//console.log(':: '+'#sub'+a(elem).attr('id'))

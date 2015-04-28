@@ -41,7 +41,7 @@ public class ItemCarteDao extends GenericDao<ItemCarte>{
 		List<ItemCarte> allDispo = new ArrayList<ItemCarte>();
 		
 		try {
-			pstm = connex.prepareStatement("SELECT * FROM itemcarte WHERE type = ? ORDER BY nom");
+			pstm = connex.prepareStatement("SELECT * FROM itemcarte WHERE type = ? AND disponible = 1 ORDER BY nom");
 			pstm.setString(1, type);
 			
 			res = pstm.executeQuery();
@@ -65,6 +65,36 @@ public class ItemCarteDao extends GenericDao<ItemCarte>{
 		}
 		
 		return allDispo;
+	}
+	
+	public List<ItemCarte> getAll(String type){
+		List<ItemCarte> all = new ArrayList<ItemCarte>();
+		
+		try {
+			pstm = connex.prepareStatement("SELECT * FROM itemcarte WHERE type = ? ORDER BY nom");
+			pstm.setString(1, type);
+			
+			res = pstm.executeQuery();
+			
+			while(res.next()){
+				all.add(
+					new ItemCarte(
+						res.getInt("idItemCarte"), 
+						res.getString("nom"),
+						res.getString("type"), 
+						res.getString("description"), 
+						res.getString("img"),
+						res.getBoolean("disponible"), 
+						res.getDouble("prix")
+					)
+				);
+			}
+				
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return all;
 	}
 
 }

@@ -10,7 +10,7 @@
 	
 	<servlet>
 		<servlet-name>Home</servlet-name>
-		<servlet-class>switch_newlook.servlets.Home</servlet-class>
+		<servlet-class>switch_newlook.servlets.PagePrincipale</servlet-class>
 	</servlet>
 	
 	<servlet-mapping>
@@ -50,5 +50,12 @@
 		<servlet-name>PagePrincipale</servlet-name>
 		<url-pattern>/pageprincipale</url-pattern>
 	</servlet-mapping>
+	
+		
+	<error-page>
+		<error-code>404</error-code>
+		<location>/WEB-INF/404.jsp</location>
+	</error-page>
+
 
 </web-app>

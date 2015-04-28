@@ -40,6 +40,22 @@ h1{
 	
 	}
 
+.itemThumbnail{
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+.inactive:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  background-color: rgba(168, 168, 168, 0.7);
+  cursor: initial;
+}
+
 .focused .itemThumbnail:after{
 	content: "";
 	position: absolute;
@@ -126,6 +142,8 @@ li.paneMenu .description h4{
 	transform: scale(0, 0);
 	-webkit-transform: scale(0, 0);
 }
+
+
 
 .back-head{
 	border-bottom: 0px;
@@ -322,6 +340,134 @@ button, .button:hover{
 /*-------------------------------*/
 
 
+/*-------------------------------*/
+/*---  Nouveau menu >> ----------*/
+/*-------------------------------*/
+
+
+/*---- button menu new ----------*/
+/*
+div#menu-new {
+  margin: 0rem 0 1rem 0;
+  width: 4rem;
+  height: 4rem;
+  background-color: rgb(210, 82, 127);
+  border: .5rem solid rgb(112, 63, 72);
+  border-radius: 10rem;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: top;
+}
+div#menu-new:after {
+  content: "";
+  background-color: white;
+  width: .4rem;
+  height: 2.2rem;
+  position: absolute;
+  top: .4rem;
+  left: 1.28rem;
+  border-radius: 3rem;
+}
+div#menu-new:before {
+  content: "";
+  background-color: white;
+  width: 2.2rem;
+  height: .4rem;
+  position: absolute;
+  top: 1.4rem;
+  left: .4rem;
+  border-radius: 3rem;
+}
+
+div#menu-new-type-cont{
+	overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 2rem; /* car menu-new-type en relative left 1rem 
+  transform: scale(0,1);
+  transform-origin: 0px 0px 0px;
+  
+  transition: transform 200ms ease-in-out;
+  -webkit-transition: transform 200ms ease-in-out;
+}
+div#menu-new-type {
+  background-color: rgb(210, 82, 127);
+  position: relative;
+  left: 0px;
+  top: 0px;
+  padding-left: .9rem;
+  border-radius: 3px;
+  border: .2rem solid rgb(112, 63, 72);
+}
+div#menu-new-type:before {
+  content: "";
+  position: absolute;
+  left: -1.5rem;
+  top: 1rem;
+  width: 0px;
+  height: 0px;
+  border: .8rem solid rgb(112, 63, 72);
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+*/
+
+/*------ ajouter un menu -------*/
+
+div#menu-new ul.pricing-table:hover:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+div#menu-new li{
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+div#new-plat-seul li.bullet-item::before {
+  content: "ou";
+  position: absolute;
+  top: -0.5rem;
+}
+div#new-formule li.bullet-item::before {
+  content: "+";
+  position: absolute;
+  top: -0.5rem;
+}
+.bullet-item:first-child::before{
+	content:"";
+}
+
+/*-------------------------------*/
+/*--- << nouveau menu -----------*/
+/*-------------------------------*/
+
+
+/*-------------------------------*/
+/*--- Ticket de caisse >>--------*/
+/*-------------------------------*/
+
+ul.item-menu-list li{
+	font-size: .8rem;	
+	font-style: oblique;
+}
+
+
+/*-------------------------------*/
+/*--- << Ticket de caisse -------*/
+/*-------------------------------*/
+
+
 
 .logo{
 	padding: 0.9375rem;
@@ -453,5 +599,39 @@ button, .button:hover{
 	}
 	100%{
 		-webkit-transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes reverse-expend-1{
+	0%{
+		transform: rotateX(0deg);
+	}
+	50%{
+		transform: rotateX(90deg);
+	}
+	100%{
+		transform: rotateX(180deg);
+	}
+}
+@-webkit-keyframes reverse-expend-2{
+	0%{
+	
+	}
+	50%{
+		display: none;
+	}
+	100%{
+		
+	}
+}
+@-webkit-keyframes reverse-expend-3{
+	0%{
+	
+	}
+	50%{
+		display: block;
+	}
+	100%{
+	
 	}
 }
